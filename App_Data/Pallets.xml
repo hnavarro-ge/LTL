@@ -1,0 +1,50 @@
+<?xml version="1.0" standalone="yes"?>
+<OTMDataSet xmlns="http://tempuri.org/OTMDataSet.xsd">
+  <dtPallets>
+    <Site>DAA</Site>
+    <System>English</System>
+    <PalletGID>Pallet A</PalletGID>
+    <Width>48</Width>
+    <Length>48</Length>
+    <LengthUOM>FT</LengthUOM>
+    <WeightUOM>LB</WeightUOM>
+  </dtPallets>
+  <dtPallets>
+    <Site>MRM</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet B</PalletGID>
+    <Width>100</Width>
+    <Length>100</Length>
+    <LengthUOM>CMT</LengthUOM>
+    <WeightUOM>
+      KG</WeightUOM>
+  </dtPallets>
+  <dtPallets>
+    <Site>MRM</Site>
+    <System>English</System>
+    <PalletGID>Pallet A</PalletGID>
+    <Width>48</Width>
+    <Length>48</Length>
+    <LengthUOM>FOT</LengthUOM>
+    <WeightUOM>LB</WeightUOM>
+  </dtPallets>
+  <dtPallets>
+    <Site>XRM</Site>
+    <System>English</System>
+    <PalletGID>Pallet B</PalletGID>
+    <Width>9</Width>
+    <Length>12</Length>
+    <LengthUOM>INH</LengthUOM>
+    <WeightUOM>
+      LB</WeightUOM>
+  </dtPallets>
+  <dtPallets>
+    <Site>XRM</Site>
+    <System>English</System>
+    <PalletGID>Pallet A</PalletGID>
+    <Width>9</Width>
+    <Length>16</Length>
+    <LengthUOM>INH</LengthUOM>
+    <WeightUOM>LB</WeightUOM>
+  </dtPallets>
+</OTMDataSet>

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<xs:element name="Transmission">
+              <xs:complexType>
+                     <xs:sequence>
+                            <xs:element name="TransmissionHeader">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="UserName"></xs:element>
+                                                 <xs:element name="Password"></xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                            <xs:element name="TransmissionBody">
+                                   <xs:complexType>
+                                          <xs:sequence>
+                                                 <xs:element name="GLogXMLElement">
+                                                        <xs:complexType>
+                                                               <xs:sequence>
+                                                                      <xs:element name="Release"> 
+                                                                             <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                           <xs:element name="ReleaseGid">
+                                                                                                  <xs:complexType>
+                                                                                                         <xs:sequence>
+                                                                                                                <xs:element name="Gid">
+                                                                                                                       <xs:complexType>
+                                                                                                                              <xs:sequence>
+                                                                                                                                     <xs:element name="DomainName" type="xs:string"></xs:element>   <!-- STATIC: EBS -->
+                                                                                                                                     <xs:element name="Xid" type="xs:int"></xs:element>   <!-- Delivery ID -->
+                                                                                                                                 </xs:sequence>
+                                                                                                                          </xs:complexType>
+                                                                                                                   </xs:element>
+                                                                                                            </xs:sequence>
+                                                                                                     </xs:complexType>
+                                                                                              </xs:element>
+                                                                                           <xs:element name="TransactionCode" type="xs:string"></xs:element>
+                                                                                           <xs:element name="ReplaceChildren">
+                                                                                                  <xs:complexType>
+                                                                                                         <xs:sequence>
+                                                                                                                <xs:element name="ManagedChild" maxOccurs="unbounded" type="xs:string"></xs:element>
+                                                                                                            </xs:sequence>
+                                                                                                     </xs:complexType>
+                                                                                              </xs:element>
+                                                                                           <xs:element name="ReleaseLine" maxOccurs="unbounded">   <!-- Loop for each ReleaseLine  -->
+                                                                                                  <xs:complexType>
+                                                                                                         <xs:sequence>
+                                                                                                                <xs:element name="ReleaseLineGid">
+                                                                                                                       <xs:complexType>
+                                                                                                                              <xs:sequence>
+                                                                                                                                     <xs:element name="Gid">
+                                                                                                                                            <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                          <xs:element name="DomainName" type="xs:string"></xs:element>   <!-- STATIC:EBS   -->
+                                                                                                                                                          <xs:element name="Xid" type="xs:int"></xs:element>   <!-- Order release (Delivery) line ID from ID  -->
+                                                                                                                                                      </xs:sequence>
+                                                                                                                                               </xs:complexType>
+                                                                                                                                        </xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                          </xs:complexType>
+                                                                                                                   </xs:element>
+                                                                                                                <xs:element name="ItemQuantity">
+                                                                                                                       <xs:complexType>
+                                                                                                                              <xs:sequence>
+                                                                                                                                     <xs:element name="WeightVolume">
+                                                                                                                                            <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                          <xs:element name="Weight">
+                                                                                                                                                                 <xs:complexType>
+                                                                                                                                                                        <xs:sequence>
+                                                                                                                                                                               <xs:element name="WeightValue" type="xs:int"></xs:element>   <!-- Total weight value divided by number of Order Release lines (WeightValue / number of order Release lines )  -->
+                                                                                                                                                                               <xs:element name="WeightUOMGid">
+                                                                                                                                                                                      <xs:complexType>
+                                                                                                                                                                                             <xs:sequence>
+                                                                                                                                                                                                    <xs:element name="Gid">
+                                                                                                                                                                                                           <xs:complexType>
+                                                                                                                                                                                                                  <xs:sequence>
+                                                                                                                                                                                                                         <xs:element name="Xid" type="xs:string"></xs:element>  <!-- Weight Unit of Measurement (GRM, KG etc)   -->
+                                                                                                                                                                                                                     </xs:sequence>
+                                                                                                                                                                                                              </xs:complexType>
+                                                                                                                                                                                                       </xs:element>
+                                                                                                                                                                                                </xs:sequence>
+                                                                                                                                                                                         </xs:complexType>
+                                                                                                                                                                                  </xs:element>
+                                                                                                                                                                           </xs:sequence>
+                                                                                                                                                                    </xs:complexType>
+                                                                                                                                                             </xs:element>
+                                                                                                                                                          <xs:element name="Volume">
+                                                                                                                                                                 <xs:complexType>
+                                                                                                                                                                        <xs:sequence>
+                                                                                                                                                                               <xs:element name="VolumeValue" type="xs:int"></xs:element> <!-- Total volume value divided by number of Order Release lines (VolumeValue / number of rder Release lines )  -->
+                                                                                                                                                                               <xs:element name="VolumeUOMGid">
+                                                                                                                                                                                      <xs:complexType>
+                                                                                                                                                                                             <xs:sequence>
+                                                                                                                                                                                                    <xs:element name="Gid">
+                                                                                                                                                                                                           <xs:complexType>
+                                                                                                                                                                                                                  <xs:sequence>
+                                                                                                                                                                                                                         <xs:element name="Xid" type="xs:string"></xs:element> <!-- Volume Unit of Measurement (CMQ, MQ etc)   -->
+                                                                                                                                                                                                                     </xs:sequence>
+                                                                                                                                                                                                              </xs:complexType>
+                                                                                                                                                                                                       </xs:element>
+                                                                                                                                                                                                </xs:sequence>
+                                                                                                                                                                                         </xs:complexType>
+                                                                                                                                                                                  </xs:element>
+                                                                                                                                                                           </xs:sequence>
+                                                                                                                                                                    </xs:complexType>
+                                                                                                                                                             </xs:element>
+                                                                                                                                                      </xs:sequence>
+                                                                                                                                               </xs:complexType>
+                                                                                                                                        </xs:element>
+                                                                                                                                     <xs:element name="PackagedItemCount" type="xs:int"></xs:element> <!-- Packaged item count per line   -->
+                                                                                                                                 </xs:sequence>
+                                                                                                                          </xs:complexType>
+                                                                                                                   </xs:element>
+                                                                                                            </xs:sequence>
+                                                                                                     </xs:complexType>
+                                                                                              </xs:element> <!--  END OF the Loop for each ReleaseLine  -->
+                                                                                           <xs:element name="ShipUnit" maxOccurs="unbounded"> <!--Loop for each ShipUnit  -->
+                                                                                                  <xs:complexType>
+                                                                                                         <xs:sequence>
+                                                                                                                <xs:element name="ShipUnitGid">
+                                                                                                                       <xs:complexType>
+                                                                                                                              <xs:sequence>
+                                                                                                                                     <xs:element name="Gid">
+                                                                                                                                            <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                          <xs:element name="DomainName" type="xs:string"></xs:element> <!-- STATIC:EBS   -->
+                                                                                                                                                          <xs:element name="Xid" type="xs:string"></xs:element> <!-- ShipUnit id - this should be generated as deliveryID-SequenceNumber example: 99391771-001, 99391771-002   -->
+                                                                                                                                                      </xs:sequence>
+                                                                                                                                               </xs:complexType>
+                                                                                                                                        </xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                          </xs:complexType>
+                                                                                                                   </xs:element>
+                                                                                                                <xs:element name="TransactionCode" type="xs:string"></xs:element> <!-- STATIC: RC   -->
+                                                                                                                <xs:element name="WeightVolume">
+                                                                                                                       <xs:complexType>
+                                                                                                                              <xs:sequence>
+                                                                                                                                     <xs:element name="Weight">
+                                                                                                                                            <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                          <xs:element name="WeightValue" type="xs:int"></xs:element> <!-- ShipUnit weight   -->
+                                                                                                                                                          <xs:element name="WeightUOMGid">
+                                                                                                                                                                 <xs:complexType>
+                                                                                                                                                                        <xs:sequence>
+                                                                                                                                                                               <xs:element name="Gid">
+                                                                                                                                                                                      <xs:complexType>
+                                                                                                                                                                                             <xs:sequence>
+                                                                                                                                                                                                    <xs:element name="Xid" type="xs:string"></xs:element> <!-- ShipUnit Weight UOM (KG)   -->
+                                                                                                                                                                                                </xs:sequence>
+                                                                                                                                                                                         </xs:complexType>
+                                                                                                                                                                                  </xs:element>
+                                                                                                                                                                           </xs:sequence>
+                                                                                                                                                                    </xs:complexType>
+                                                                                                                                                             </xs:element>
+                                                                                                                                                      </xs:sequence>
+                                                                                                                                               </xs:complexType>
+                                                                                                                                        </xs:element>
+                                                                                                                                     <xs:element name="Volume">
+                                                                                                                                            <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                          <xs:element name="VolumeValue" type="xs:int"></xs:element> <!-- ShipUnit Volume   -->
+                                                                                                                                                          <xs:element name="VolumeUOMGid">
+                                                                                                                                                                 <xs:complexType>
+                                                                                                                                                                        <xs:sequence>
+                                                                                                                                                                               <xs:element name="Gid">
+                                                                                                                                                                                      <xs:complexType>
+                                                                                                                                                                                             <xs:sequence>
+                                                                                                                                                                                                    <xs:element name="Xid" type="xs:string"></xs:element> <!-- ShipUnit Volume UOM (CMQ, MQ)   -->
+                                                                                                                                                                                                </xs:sequence>
+                                                                                                                                                                                         </xs:complexType>
+                                                                                                                                                                                  </xs:element>
+                                                                                                                                                                           </xs:sequence>
+                                                                                                                                                                    </xs:complexType>
+                                                                                                                                                             </xs:element>
+                                                                                                                                                      </xs:sequence>
+                                                                                                                                               </xs:complexType>
+                                                                                                                                        </xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                          </xs:complexType>
+                                                                                                                   </xs:element>
+                                                                                                                <xs:element name="UnitNetWeightVolume">
+                                                                                                                       <xs:complexType>
+                                                                                                                              <xs:sequence>
+                                                                                                                                     <xs:element name="Weight">
+                                                                                                                                            <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                          <xs:element name="WeightValue" type="xs:int"></xs:element> <!-- ShipUnit weight - the same as WeightValue from Weight branch  -->
+                                                                                                                                                          <xs:element name="WeightUOMGid">
+                                                                                                                                                                 <xs:complexType>
+                                                                                                                                                                        <xs:sequence>
+                                                                                                                                                                               <xs:element name="Gid">
+                                                                                                                                                                                      <xs:complexType>
+                                                                                                                                                                                             <xs:sequence>
+                                                                                                                                                                                                    <xs:element name="Xid" type="xs:string"></xs:element> <!-- ShipUnit Weight UOM (KG)   -->
+                                                                                                                                                                                                </xs:sequence>
+                                                                                                                                                                                         </xs:complexType>
+                                                                                                                                                                                  </xs:element>
+                                                                                                                                                                           </xs:sequence>
+                                                                                                                                                                    </xs:complexType>
+                                                                                                                                                             </xs:element>
+                                                                                                                                                      </xs:sequence>
+                                                                                                                                               </xs:complexType>
+                                                                                                                                        </xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                          </xs:complexType>
+                                                                                                                   </xs:element>
+                                                                                                                <xs:element name="LengthWidthHeight">
+                                                                                                                       <xs:complexType>
+                                                                                                                              <xs:sequence>
+                                                                                                                                     <xs:element name="Length">
+                                                                                                                                            <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                          <xs:element name="LengthValue" type="xs:int"></xs:element> <!-- ShipUnit Length value   -->
+                                                                                                                                                          <xs:element name="LengthUOMGid">
+                                                                                                                                                                 <xs:complexType>
+                                                                                                                                                                        <xs:sequence>
+                                                                                                                                                                               <xs:element name="Gid">
+                                                                                                                                                                                      <xs:complexType>
+                                                                                                                                                                                             <xs:sequence>
+                                                                                                                                                                                                    <xs:element name="Xid" type="xs:string"></xs:element>  <!-- ShipUnit Length UOM (CM, M, IN)   -->
+                                                                                                                                                                                                </xs:sequence>
+                                                                                                                                                                                         </xs:complexType>
+                                                                                                                                                                                  </xs:element>
+                                                                                                                                                                           </xs:sequence>
+                                                                                                                                                                    </xs:complexType>
+                                                                                                                                                             </xs:element>
+                                                                                                                                                      </xs:sequence>
+                                                                                                                                               </xs:complexType>
+                                                                                                                                        </xs:element>
+                                                                                                                                     <xs:element name="Width">
+                                                                                                                                            <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                          <xs:element name="WidthValue" type="xs:int"></xs:element>  <!-- ShipUnit Width value   -->
+                                                                                                                                                          <xs:element name="WidthUOMGid">
+                                                                                                                                                                 <xs:complexType>
+                                                                                                                                                                        <xs:sequence>
+                                                                                                                                                                               <xs:element name="Gid">
+                                                                                                                                                                                      <xs:complexType>
+                                                                                                                                                                                             <xs:sequence>
+                                                                                                                                                                                                    <xs:element name="Xid" type="xs:string"></xs:element> <!-- ShipUnit Width UOM (CM, M, IN)   -->
+                                                                                                                                                                                                </xs:sequence>
+                                                                                                                                                                                         </xs:complexType>
+                                                                                                                                                                                  </xs:element>
+                                                                                                                                                                           </xs:sequence>
+                                                                                                                                                                    </xs:complexType>
+                                                                                                                                                             </xs:element>
+                                                                                                                                                      </xs:sequence>
+                                                                                                                                               </xs:complexType>
+                                                                                                                                        </xs:element>
+                                                                                                                                     <xs:element name="Height">
+                                                                                                                                            <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                          <xs:element name="HeightValue" type="xs:int"></xs:element> <!-- ShipUnit Height value   -->
+                                                                                                                                                          <xs:element name="HeightUOMGid">
+                                                                                                                                                                 <xs:complexType>
+                                                                                                                                                                        <xs:sequence>
+                                                                                                                                                                               <xs:element name="Gid">
+                                                                                                                                                                                      <xs:complexType>
+                                                                                                                                                                                             <xs:sequence>
+                                                                                                                                                                                                    <xs:element name="Xid" type="xs:string"></xs:element> <!-- ShipUnit Height UOM (CM, M, IN)   -->
+                                                                                                                                                                                                </xs:sequence>
+                                                                                                                                                                                         </xs:complexType>
+                                                                                                                                                                                  </xs:element>
+                                                                                                                                                                           </xs:sequence>
+                                                                                                                                                                    </xs:complexType>
+                                                                                                                                                             </xs:element>
+                                                                                                                                                      </xs:sequence>
+                                                                                                                                               </xs:complexType>
+                                                                                                                                        </xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                          </xs:complexType>
+                                                                                                                   </xs:element>
+                                                                                                                <xs:element name="ShipUnitContent" maxOccurs="unbounded"> <!--Loop for each Line item  -->
+                                                                                                                       <xs:complexType>
+                                                                                                                              <xs:sequence>
+                                                                                                                                     <xs:element name="LineNumber" type="xs:int"></xs:element> <!-- Next number from 1 for each ship unit (If we have 3 lines this will have to be looped 3 times with next numbers (1,2,3) -->
+                                                                                                                                     <xs:element name="ItemQuantity">
+                                                                                                                                            <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                          <xs:element name="WeightVolume">
+                                                                                                                                                                 <xs:complexType>
+                                                                                                                                                                        <xs:sequence>
+                                                                                                                                                                               <xs:element name="Weight">
+                                                                                                                                                                                      <xs:complexType>
+                                                                                                                                                                                             <xs:sequence>
+                                                                                                                                                                                                    <xs:element name="WeightValue" type="xs:int"></xs:element> <!-- ShipUnit Weight divided by number of order lines  -->
+                                                                                                                                                                                                    <xs:element name="WeightUOMGid">
+                                                                                                                                                                                                           <xs:complexType>
+                                                                                                                                                                                                                  <xs:sequence>
+                                                                                                                                                                                                                         <xs:element name="Gid">
+                                                                                                                                                                                                                                <xs:complexType>
+                                                                                                                                                                                                                                       <xs:sequence>
+                                                                                                                                                                                                                                              <xs:element name="Xid" type="xs:string"></xs:element>  <!-- ShipUnit Weight UOM (KG, G) -->
+                                                                                                                                                                                                                                          </xs:sequence>
+                                                                                                                                                                                                                                   </xs:complexType>
+                                                                                                                                                                                                                            </xs:element>
+                                                                                                                                                                                                                     </xs:sequence>
+                                                                                                                                                                                                              </xs:complexType>
+                                                                                                                                                                                                       </xs:element>
+                                                                                                                                                                                                </xs:sequence>
+                                                                                                                                                                                         </xs:complexType>
+                                                                                                                                                                                  </xs:element>
+                                                                                                                                                                               <xs:element name="Volume">
+                                                                                                                                                                                      <xs:complexType>
+                                                                                                                                                                                             <xs:sequence>
+                                                                                                                                                                                                    <xs:element name="VolumeValue" type="xs:int"></xs:element> <!-- ShipUnit Volume divided by number of order lines  -->
+                                                                                                                                                                                                    <xs:element name="VolumeUOMGid">
+                                                                                                                                                                                                           <xs:complexType>
+                                                                                                                                                                                                                  <xs:sequence>
+                                                                                                                                                                                                                         <xs:element name="Gid">
+                                                                                                                                                                                                                                <xs:complexType>
+                                                                                                                                                                                                                                       <xs:sequence>
+                                                                                                                                                                                                                                              <xs:element name="Xid" type="xs:string"></xs:element> <!-- ShipUnit Volume UOM (CMQ, MQ)) -->
+                                                                                                                                                                                                                                          </xs:sequence>
+                                                                                                                                                                                                                                   </xs:complexType>
+                                                                                                                                                                                                                            </xs:element>
+                                                                                                                                                                                                                     </xs:sequence>
+                                                                                                                                                                                                              </xs:complexType>
+                                                                                                                                                                                                       </xs:element>
+                                                                                                                                                                                                </xs:sequence>
+                                                                                                                                                                                         </xs:complexType>
+                                                                                                                                                                                  </xs:element>
+                                                                                                                                                                           </xs:sequence>
+                                                                                                                                                                    </xs:complexType>
+                                                                                                                                                             </xs:element>
+                                                                                                                                                          <xs:element name="PackagedItemCount" type="xs:int"></xs:element>  <!-- Packaged item count - TO BE DESCRIBED -->
+                                                                                                                                                      </xs:sequence>
+                                                                                                                                               </xs:complexType>
+                                                                                                                                        </xs:element>
+                                                                                                                                     <xs:element name="ReleaseGid">
+                                                                                                                                            <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                          <xs:element name="Gid">
+                                                                                                                                                                 <xs:complexType>
+                                                                                                                                                                        <xs:sequence>
+                                                                                                                                                                               <xs:element name="DomainName" type="xs:string"></xs:element> <!-- STATIC:EBS   -->
+                                                                                                                                                                               <xs:element name="Xid" type="xs:int"></xs:element> <!-- Delivery ID  -->
+                                                                                                                                                                           </xs:sequence>
+                                                                                                                                                                    </xs:complexType>
+                                                                                                                                                             </xs:element>
+                                                                                                                                                      </xs:sequence>
+                                                                                                                                               </xs:complexType>
+                                                                                                                                        </xs:element>
+                                                                                                                                     <xs:element name="ReleaseLineGid">
+                                                                                                                                            <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                          <xs:element name="Gid">
+                                                                                                                                                                 <xs:complexType>
+                                                                                                                                                                        <xs:sequence>
+                                                                                                                                                                               <xs:element name="DomainName" type="xs:string"></xs:element> <!-- STATIC:EBS   -->
+                                                                                                                                                                               <xs:element name="Xid" type="xs:int"></xs:element> <!-- Order Release line   -->
+                                                                                                                                                                           </xs:sequence>
+                                                                                                                                                                    </xs:complexType>
+                                                                                                                                                             </xs:element>
+                                                                                                                                                      </xs:sequence>
+                                                                                                                                               </xs:complexType>
+                                                                                                                                        </xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                          </xs:complexType>
+                                                                                                                   </xs:element> <!-- END of the Loop for each Line item  -->
+                                                                                                                <xs:element name="ShipUnitCount" type="xs:int"></xs:element> <!-- STATIC: 1-->
+                                                                                                            </xs:sequence>
+                                                                                                     </xs:complexType>
+                                                                                              </xs:element> <!-- END of the Loop for each ShipUnit  -->
+                                                                                           <xs:element name="TotalWeightVolume">
+                                                                                                  <xs:complexType>
+                                                                                                         <xs:sequence>
+                                                                                                                <xs:element name="WeightVolume">
+                                                                                                                       <xs:complexType>
+                                                                                                                              <xs:sequence>
+                                                                                                                                     <xs:element name="Weight">
+                                                                                                                                            <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                          <xs:element name="WeightValue" type="xs:int"></xs:element> <!-- Total Delivery weight (sum of all weights)   -->
+                                                                                                                                                          <xs:element name="WeightUOMGid">
+                                                                                                                                                                 <xs:complexType>
+                                                                                                                                                                        <xs:sequence>
+                                                                                                                                                                               <xs:element name="Gid">
+                                                                                                                                                                                      <xs:complexType>
+                                                                                                                                                                                             <xs:sequence>
+                                                                                                                                                                                                    <xs:element name="Xid" type="xs:string"></xs:element> <!-- Total Delivery weight (KG, G)   -->
+                                                                                                                                                                                                </xs:sequence>
+                                                                                                                                                                                         </xs:complexType>
+                                                                                                                                                                                  </xs:element>
+                                                                                                                                                                           </xs:sequence>
+                                                                                                                                                                    </xs:complexType>
+                                                                                                                                                             </xs:element>
+                                                                                                                                                      </xs:sequence>
+                                                                                                                                               </xs:complexType>
+                                                                                                                                        </xs:element>
+                                                                                                                                     <xs:element name="Volume">
+                                                                                                                                            <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                          <xs:element name="VolumeValue" type="xs:int"></xs:element> <!-- Total Delivery  Volume (sum of all volumes)   -->
+                                                                                                                                                          <xs:element name="VolumeUOMGid">
+                                                                                                                                                                 <xs:complexType>
+                                                                                                                                                                        <xs:sequence>
+                                                                                                                                                                               <xs:element name="Gid">
+                                                                                                                                                                                      <xs:complexType>
+                                                                                                                                                                                             <xs:sequence>
+                                                                                                                                                                                                    <xs:element name="Xid" type="xs:string"></xs:element> <!-- Total Delivery Volume UOM (CMQ, MQ, INQ)   -->
+                                                                                                                                                                                                </xs:sequence>
+                                                                                                                                                                                         </xs:complexType>
+                                                                                                                                                                                  </xs:element>
+                                                                                                                                                                           </xs:sequence>
+                                                                                                                                                                    </xs:complexType>
+                                                                                                                                                             </xs:element>
+                                                                                                                                                      </xs:sequence>
+                                                                                                                                               </xs:complexType>
+                                                                                                                                        </xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                          </xs:complexType>
+                                                                                                                   </xs:element>
+                                                                                                            </xs:sequence>
+                                                                                                     </xs:complexType>
+                                                                                              </xs:element>
+                                                                                           <xs:element name="TotalNetWeightVolume">
+                                                                                                  <xs:complexType>
+                                                                                                         <xs:sequence>
+                                                                                                                <xs:element name="Weight">
+                                                                                                                       <xs:complexType>
+                                                                                                                              <xs:sequence>
+                                                                                                                                     <xs:element name="WeightValue" type="xs:int"></xs:element> <!-- Total Delivery weight (sum of all weights)   -->
+                                                                                                                                     <xs:element name="WeightUOMGid">
+                                                                                                                                            <xs:complexType>
+                                                                                                                                                   <xs:sequence>
+                                                                                                                                                          <xs:element name="Gid">
+                                                                                                                                                                 <xs:complexType>
+                                                                                                                                                                        <xs:sequence>
+                                                                                                                                                                               <xs:element name="Xid" type="xs:string"></xs:element> <!-- Total Delivery weight (KG, G)   -->
+                                                                                                                                                                           </xs:sequence>
+                                                                                                                                                                    </xs:complexType>
+                                                                                                                                                             </xs:element>
+                                                                                                                                                      </xs:sequence>
+                                                                                                                                               </xs:complexType>
+                                                                                                                                        </xs:element>
+                                                                                                                                 </xs:sequence>
+                                                                                                                          </xs:complexType>
+                                                                                                                   </xs:element>
+                                                                                                            </xs:sequence>
+                                                                                                     </xs:complexType>
+                                                                                              </xs:element>
+                                                                                           <xs:element name="TotalPackagedItemCount" type="xs:int"></xs:element>  <!-- Total Number of Packaged items - to be taken from OTM   -->
+                                                                                       </xs:sequence>
+                                                                                </xs:complexType>
+                                                                         </xs:element>
+                                                                  </xs:sequence>
+                                                           </xs:complexType>
+                                                    </xs:element>
+                                             </xs:sequence>
+                                      </xs:complexType>
+                               </xs:element>
+                        </xs:sequence>
+                     <xs:attribute name="xmlns" type="xs:string"></xs:attribute>
+                 </xs:complexType>
+          </xs:element>
+   </xs:schema>

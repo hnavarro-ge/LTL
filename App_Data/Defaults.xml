@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<OTMDataSet xmlns="http://tempuri.org/OTMDataSet.xsd">
+  <Defaults>
+    <Site>AAS</Site>
+    <System>English</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>AUS</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>BAW</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>BHV</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>BHW</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>BOP</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>BTU</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>BVO</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>BXC</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>BXD</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>BXV</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>CTD</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>CTJ</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>CTM</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>DAA</Site>
+    <System>English</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>DAB</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>DAE</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>DCD</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>DFR</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>DRC</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>DTJ</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>GBB</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>GBG</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>GEN</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>GES</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>GEW</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>GPS</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>GSE</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>GSJ</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>HKG</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>HWD</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>KDN</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>LAU</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>MAG</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>MCR</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>MCV</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>MOC</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>MRB</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>MRJ</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>MRM</Site>
+    <System>English</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>MRT</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>MRU</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>MRW</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>MSN</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>PET</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>SIN</Site>
+    <System>English</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>SMM</Site>
+    <System>English</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>TJG</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>TJM</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>TJX</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>TUB</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>UHL</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>UNS</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>USA</Site>
+    <System>English</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+  <Defaults>
+    <Site>XRM</Site>
+    <System>Metric</System>
+    <PalletGID>Pallet A</PalletGID>
+  </Defaults>
+</OTMDataSet>
